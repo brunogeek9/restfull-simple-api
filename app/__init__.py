@@ -17,7 +17,7 @@ app.config['SESSION_TYPE'] = 'filesystem'
 app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 db = SQLAlchemy(app)
 api = Api(app)
-api.add_resource(AllTasks,'/tasks')
+api.add_resource(AllTasks,'/task')
 api.add_resource(TaskResource, '/task/<string:title>')
 
 from app.controllers import default
